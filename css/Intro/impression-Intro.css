@@ -1,0 +1,104 @@
+        /* impressionist section */
+
+section.impression{
+    padding: 4rem 0;
+}
+.impression-items{
+    display: flex;
+}
+.impression-item{
+    flex: 1;
+}
+.impression-item:first-child{
+    padding: 20px 0;
+}
+.impression-item:first-child > .title{
+    font-size: 17px;
+    text-transform: uppercase;
+    color: var(--main_color);
+    margin-bottom: 10px;
+}
+.impression-item:first-child > .subtitle{
+    font-size: 36px;
+    margin-right: 80px;
+    margin-bottom: 40px;
+}
+.impression-item-info{
+    /* margin-top: 80px; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 50px;
+}
+.impression-item-info .clients, .impression-item-info .projects{
+    padding-right: 20px;
+    display: grid;
+    grid-template-rows: 40% 30% 30%;
+}
+.impression-item-info .clients .num, .impression-item-info .projects .num{
+    font-size: 30px;
+    color: var(--main_color);
+}
+.impression-item-info .clients h3, .impression-item-info .projects h3{
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 600;
+}
+.impression-item-info .clients p, .impression-item-info .projects p{
+    line-height: 1.6;
+}
+.impression-item:last-child img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media screen and (min-width:401px) and (max-width:900px) {
+    .impression-items{
+        display: grid;
+        grid-template-rows: 45% 40%;
+        grid-row-gap: 70px;
+    }
+    .impression-item:first-child > .subtitle{
+        font-size: 25px;
+    }
+    .impression-item-info .clients, .impression-item-info .projects{
+        display: block;
+    }
+    .impression-item-info .clients h3, .impression-item-info .projects h3 {
+        margin: 10px 0;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:400px){
+    section.impression{
+        padding: 0;
+        height: 700px;
+    }
+    section.impression .container{
+        height: 700px;
+    }
+    .impression-items{
+        display: grid;
+        grid-template-rows: 50% 30%;
+        grid-row-gap: 100px;
+    }
+    .impression-item:first-child > .subtitle{
+        font-size: 22px;
+    }
+    .impression-item-info{
+        display: block;
+    }
+    .impression-item-info .clients, .impression-item-info .projects{
+        display: block;
+    }
+    .impression-item-info .clients{
+        margin-bottom: 10px;
+    }
+    .impression-item-info .clients h3, .impression-item-info .projects h3 {
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    .impression-item-info .clients .num, .impression-item-info .projects .num{
+        font-size: 25px;
+    }
+}

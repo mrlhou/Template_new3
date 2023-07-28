@@ -1,0 +1,186 @@
+
+/* My Skills section */
+
+section.skills{
+    padding: 4em 0;
+}
+section.skills section.header{
+    padding: 4em 0;
+}
+.skill-items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 100px;
+}
+.skill-item{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    grid-row-gap: 20px;
+}
+.skill-item-info{
+    width: 100%;
+}
+.skill-item-info h2{
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 20px;
+    display: flex;
+}
+.skill-item-info h2 span{
+    text-align: center;
+    flex: 1;
+}
+.skill-item-info h2 span:first-child{
+    text-align: left;
+}
+.skill-item-info .tape{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #e8e8e8;
+    border-radius: 20px;
+}
+.skill-item-info .tape .tape-overlay{
+    position: absolute;
+    height: 5px;
+    border-radius: 20px;
+}
+.skill-item-info .tape .tape-overlay .circle{
+    position: absolute;
+    top: -6px;
+    left: 99%;
+    width: 20px;
+    height: 20px;
+    border: solid 4px transparent;
+    border-radius: 50%;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.skill-item .skill-item-info:nth-child(1) h2 span:last-child{
+    margin-left: 140px;
+}
+.skill-item .skill-item-info:nth-child(2) h2 span:last-child{
+    text-align: right;
+}
+.skill-item .skill-item-info:nth-child(3) h2 span:last-child{
+    text-align: left;
+    margin-left: 80px;
+}
+.skill-item .skill-item-info:nth-child(4) h2 span:last-child{
+    text-align: right;
+    margin-right: 50px;
+    
+}
+    /* skill 1 */
+
+.skill-item .skill-item-info:nth-child(1) .tape .tape-overlay{
+    background-image: linear-gradient(
+    -224deg, #0d8abc, #61fded);
+    width: 80%;
+}
+.skill-item-info:nth-child(1) .tape .tape-overlay .circle{
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #0d8abc, #61fded);
+}
+
+    /* skill 2 */
+
+.skill-item .skill-item-info:nth-child(2) .tape .tape-overlay{
+    background-image: linear-gradient(
+    -224deg, #d45529, #eece90);
+    width: 95%;
+}
+
+.skill-item-info:nth-child(2) .tape .tape-overlay .circle{
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #d45529, #eece90);
+}
+
+    /* skill 3 */
+
+.skill-item .skill-item-info:nth-child(3) .tape .tape-overlay{
+    background-image: linear-gradient(
+    -224deg, #f646a9, #5c51ff);
+    width: 60%;
+}
+.skill-item-info:nth-child(3) .tape .tape-overlay .circle{
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f646a9, #5c51ff);
+}
+
+    /* skill 4 */
+
+.skill-item .skill-item-info:nth-child(4) .tape .tape-overlay{
+    background-image: linear-gradient(
+    -224deg, #e77654, #e5529a);
+    width: 85%;
+}
+.skill-item-info:nth-child(4) .tape .tape-overlay .circle{
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #e77654, #e5529a);
+}
+
+
+
+@media screen and (min-width:401px) and (max-width:900px) {
+    .skill-items{
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr);
+        grid-row-gap: 30px;
+        width: 100%;
+    }
+    .skill-item-info{
+        width: 100%;
+    }
+    .skill-item-info h2{
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+    .skill-item .skill-item-info:nth-child(1) h2 span:last-child{
+        margin-left: -80px;
+    }
+    .skill-item-info h2 span:first-child{
+        font-size: 20px;
+    }
+    .skill-item .skill-item-info:nth-child(2) h2 span:last-child{
+        margin-right: 0;
+    }
+    .skill-item .skill-item-info:nth-child(3) h2 span:last-child{
+        margin-left: -110px;
+    }
+    .skill-item .skill-item-info:nth-child(4) h2 span:last-child {
+        margin-right: 50px;
+    }
+}
+
+
+@media screen and (max-width:400px){
+    .skill-items{
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr);
+        grid-row-gap: 30px;
+        width: 100%;
+    }
+    .skill-item-info{
+        width: 100%;
+    }
+    .skill-item-info h2{
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+    .skill-item .skill-item-info:nth-child(1) h2 span:last-child{
+        margin-left: -50px;
+    }
+    .skill-item-info h2 span:first-child{
+        font-size: 20px;
+    }
+    .skill-item .skill-item-info:nth-child(2) h2 span:last-child{
+        margin-right: -10px;
+    }
+    .skill-item .skill-item-info:nth-child(3) h2 span:last-child{
+        margin-left: -80px;
+    }
+    .skill-item .skill-item-info:nth-child(4) h2 span:last-child {
+        margin-right: 25px;
+    }
+}
+

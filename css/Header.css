@@ -1,0 +1,201 @@
+    /* Header */
+    
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .4);
+}
+header .container{
+    grid-template-columns: 5% 92.5% 2.5%;
+    padding: 20px 0;
+}
+    
+    /* navbar */
+
+header .container .navbar > ul{
+    display: flex;
+    margin-left: 40px;
+    align-content: center;
+}
+header .container .navbar > ul > li{
+    margin: auto;
+}
+header .container .navbar ul  li:nth-child(n){
+    text-transform: capitalize;
+    font-size: 20px;
+}
+header .container .navbar ul > li a:focus{
+    border: 1px dotted var(--main_color);
+}
+header .container .navbar ul > li a:hover{
+    color: var(--main_color);
+    transition: color .5s;
+}
+header .container .navbar ul > li a.active{
+    color: var(--main_color);
+}
+.Dropdown{
+    position: relative;
+}
+.Dropdown-menu{
+    visibility: hidden;
+    opacity: 0;
+    transform: scale3d(0,0,1);
+    transition: transform .5s ,  visibility .5s ease-out;
+}
+.Dropdown-menu ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px -40px;
+    background-color: #f9f9f9;
+}
+.Dropdown-menu ul li{
+    margin-bottom: 10px;
+    width: 100%;
+}
+.Dropdown-menu ul li:last-child{
+    border: none;
+}
+.Dropdown-menu ul li a{
+    text-align: left;
+    font-size: 20px;
+}
+.Dropdown:hover .Dropdown-menu{
+    visibility: visible;
+    opacity: 1;
+    transform: scale3d(1,1,1);
+}
+    
+    /* box-search */
+
+.box-search{
+    display: flex;
+}
+.box-search input{
+    outline: none;
+    border: 1px solid #999;
+    padding: 10px;
+    border-radius: 20px 0 0 20px ;
+    width: 200px;
+    background-color: #f9f9f9;
+}
+.box-search button{
+    color: var(--white_color);
+    font-weight: bold;
+    outline: none;
+    background-color: var(--main_color);
+    border-radius: 0 20px 20px 0;
+    padding: 5px;
+    width: 90px;
+    font-size: 20px;
+    margin-left: -10px;
+    text-transform: capitalize;
+    border: none;
+    transition: background-color .5s;
+    cursor: pointer !important;
+}
+.box-search button:hover{
+    background-color: #000;
+}
+.bac{
+    background-color: var(--white_color);
+}
+.icon-lighting a i{
+    font-size: 25px;
+}
+.icon-lighting a:hover{
+    color: var(--main_color);
+    transition:  color .5s;
+}
+
+@media screen and (min-width:401px) and (max-width:900px){
+    header{
+        height: 80px;
+    }
+    header .container{
+        display: block;
+    }
+    header .container .navbar ul{
+        display: block;
+        background-color: var(--white_color);
+        height: 290px;
+        width: 100%;
+        margin-top: 60px;
+        margin-left: 0;
+        padding-top: 10px;
+        border-radius: 0 0 10px 10px ;
+    }
+    .icon-lighting{
+        position: absolute;
+        right: 60px;
+        top: 50%;
+    }
+    header .container .navbar ul li{
+        width: 100%;
+        margin-bottom: 15px;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    .Dropdown-menu{
+        display: none;
+    } 
+    header .container .navbar ul li:last-child{
+        margin-left: 15%;
+    }
+    .box-search{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+    }
+    .box-search button{
+        margin-left: -110%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    header{
+        height: 80px;
+    }
+    header .container{
+        display: block;
+    }
+    header .container .navbar ul{
+        display: none;
+        background-color: var(--white_color);
+        height: 290px;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 60px;
+        padding-top: 10px;
+        border-radius: 0 0 10px 10px ;
+    }
+    header .container .navbar ul li{
+        width: 100%;
+        margin-bottom: 15px;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    .navbar{
+        margin-top: -50px;
+    }
+    .Dropdown-menu{
+        display: none;
+    } 
+    header .container .navbar ul li:last-child{
+        margin-left: 10%;
+    }
+    .box-search{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .icon-lighting{
+        position: absolute;
+        right: 60px;
+        top: 50%;
+    }
+}

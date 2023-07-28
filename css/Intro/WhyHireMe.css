@@ -1,0 +1,57 @@
+
+        /* WhyHireMe section */
+        
+section.WhyHireMe{
+    padding: 4rem 0;
+   
+}
+section.WhyHireMe .WhyHireMe-content{
+    padding: 6rem 0;
+    background-color: #ebf4f5;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-rows: repeat(3,1fr);
+    justify-items: center;
+    text-align: center;
+}
+section.WhyHireMe .WhyHireMe-content .title{
+    font-size: 40px;
+}
+section.WhyHireMe .WhyHireMe-content .desc{
+    width: 80%;
+    font-size: 18px;
+}
+section.WhyHireMe .WhyHireMe-content a{
+    margin-top: 30px;
+    font-size: 19px;
+    display: block;
+    text-transform: capitalize;
+    width: 170px;
+    font-weight: bold;
+    height: 50px;
+    background-color: var(--main_color);
+    line-height: 50px;
+    transform: skewY(1.5);
+    color: var(--white_color);
+    border-radius: 25px;
+    transition: background-color .5s , color .5s;
+}
+section.WhyHireMe .WhyHireMe-content a:hover{
+    background-color: var(--low-bl_color);
+}
+@media screen and (max-width :400px) {
+    section.WhyHireMe {
+        padding: 0;
+    }
+    section.WhyHireMe .WhyHireMe-content {
+        grid-template-rows: none;
+    }
+    section.WhyHireMe .WhyHireMe-content .title{
+        font-size: 25px;
+        line-height: 1.5;
+    }
+    section.WhyHireMe .WhyHireMe-content .desc {
+        width: 100%;
+        line-height: 1.9;
+    }
+}

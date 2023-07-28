@@ -1,0 +1,67 @@
+   /* WhatIDo section */
+
+section.WhatIDo{
+    padding: 4em 0;
+    background-color: #ebf4f5;
+}
+section.WhatIDo section.header{
+    text-align: center;
+    padding: 2em 0;
+}
+.WhatIDo-items{
+    padding: 4em 0;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-row-gap: 30px;
+}
+.WhatIDo-item{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 40px;
+}
+.WhatIDo-item-info{
+    background-color: var(--white_color);
+    padding: 20px 35px;
+    border-radius: 10px;
+    position: relative;
+    display: grid;
+    width: 100%;
+    align-items: center;
+}
+.WhatIDo-item-info:hover .icon{
+    background-color: var(--main_color);
+    color: var(--white_color);
+}
+.WhatIDo-item-info .icon{
+    position: absolute;
+    left: -13%;
+    width: 60px;
+    height: 60px;
+    background-color: var(--white_color);
+    border-radius: 50%;
+    text-align: center;
+    color: var(--main_color);
+    transition: background-color .5s ,color .5s;
+}
+.WhatIDo-item-info .icon i{
+    line-height: 60px;
+}
+
+@media screen and (max-width: 900px) {
+    .WhatIDo-item{
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(4,1fr);
+        grid-gap: 40px;
+        justify-items: center;
+    }
+    .WhatIDo-item-info{
+        width: 60%;
+    }
+
+}
+@media screen and (max-width: 400px){
+    section.WhatIDo{
+        margin-top: 40px;
+    }
+}
